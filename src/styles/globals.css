@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --navy: #002D72;
+  --emerald: #2ECC71;
+}
+
+.container{ max-width: 1100px; margin-left:auto; margin-right:auto; padding-left:1.5rem; padding-right:1.5rem;}
+
+/* carousel animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.logo-track{
+  display: inline-flex;
+  animation: scroll 20s linear infinite;
+}
+.logo-track:hover{
+  animation-play-state: paused;
+}
+
+/* small helpers */
+html,body,#root{height:100%}
